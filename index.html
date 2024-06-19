@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Art Movements</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="slide">
+            <div class="item" style="background-image: url(img.jpg);">
+                <div class="content">
+                    <div class="name">The great wall of China</div>
+                    <div class="des">The Great Wall of China is an ancient series of walls and fortifications, totaling more than 13,000 miles, constructed to protect Chinese states against invasions. Built primarily during the Ming Dynasty (1368-1644), it stands as a symbol of China's historical strength and architectural ingenuity.</div>
+                    <button>See More</button>
+                </div>
+            </div>
+
+            
+            <div class="item" style="background-image: url(img1.png);">
+                <div class="content">
+                    <div class="name">Petra</div>
+                    <div class="des">Petra, an ancient city carved into rose-red cliffs in Jordan, served as the capital of the Nabataean Kingdom around the 4th century BC. Renowned for its rock-cut architecture and water conduit system, it is a UNESCO World Heritage site and one of the New Seven Wonders of the World.
+                    </div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(img2.png);">
+                <div class="content">
+                    <div class="name">Colosseum </div>
+                    <div class="des">The Colosseum, an iconic ancient amphitheater in Rome, Italy, was completed in AD 80 under Emperor Titus. Known for its massive size and architectural prowess, it hosted gladiatorial contests, public spectacles, and dramatic performances, symbolizing the grandeur of the Roman Empire.
+                    </div>
+                    <button>See More</button>
+                </div>
+            </div>
+
+            <div class="item" style="background-image: url(img3.png);">
+                <div class="content">
+                    <div class="name">Chichen Itza</div>
+                    <div class="des">Chichen Itza, an ancient Mayan city located in Mexico's Yucatán Peninsula, thrived between the 9th and 12th centuries. Renowned for its iconic pyramid, El Castillo, the site features a complex of impressive ruins that reflect the Mayan civilization's astronomical, architectural, and cultural achievements.
+                    </div>
+                    <button>See More</button>
+                </div>
+            </div>
+
+            <div class="item" style="background-image: url(img4.png);">
+                <div class="content">
+                    <div class="name">Machu Picchu</div>
+                    <div class="des">Machu Picchu, a 15th-century Inca citadel located in the Andes Mountains of Peru, is renowned for its sophisticated dry-stone construction and panoramic views. Often referred to as the "Lost City of the Incas," it is a UNESCO World Heritage site and one of the New Seven Wonders of the World.
+                    </div>
+                    <button>See More</button>
+                </div>
+            </div>
+
+            <div class="item" style="background-image: url(img5.png);">
+                <div class="content">
+                    <div class="name">Taj Mahal</div>
+                    <div class="des">The Taj Mahal, a magnificent white marble mausoleum in Agra, India, was built by Mughal Emperor Shah Jahan in memory of his wife Mumtaz Mahal. Completed in 1653, it is celebrated for its stunning architecture, intricate craftsmanship, and status as a symbol of eternal love.
+                    </div>
+                    <button>See More</button>
+                </div>
+            </div>
+
+            <div class="item" style="background-image: url(img6.png);">
+                <div class="content">
+                    <div class="name">Christ the Redeemer</div>
+                    <div class="des">Christ the Redeemer is an iconic 98-foot-tall statue of Jesus Christ located atop Mount Corcovado in Rio de Janeiro, Brazil. Completed in 1931, it stands as a symbol of Christianity and peace, offering panoramic views of the city and recognized as one of the New Seven Wonders of the World.
+                    </div>
+                    <button>See More</button>
+                </div>
+            </div>
+            
+
+        </div>
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+    <script>
+        let next=document.querySelector('.next')
+        let prev=document.querySelector('.prev')
+        next.addEventListener('click',function(){
+            let items =document.querySelectorAll('.item')
+            document.querySelector('.slide').appendChild(items[0])
+         })  
+         prev.addEventListener('click',function(){
+            let items =document.querySelectorAll('.item')
+            document.querySelector('.slide').prepend(items[items.length - 1])
+         })  
+         
+
+    </script>
+</body>
+</html>
